@@ -1,17 +1,22 @@
-const rect = require('./rectangle')
+import rect from "./rectangle.js"
+// const rect = require('./rectangle')
 
 function solveRect(l, w) {
     console.log(`Solving for rectangle with dimensions: ${l}, ${w}`)
-    
+
     rect(l, w, (err, rectangle) => {
-        if(err){
-            console.log('ERROR:', err.message)
+        if (err) {
+            console.log("ERROR:", err.message)
         } else {
-            console.log(`Area of rectangle with dimensions ${l}, ${w}: ${rectangle.area()}`)
-            console.log(`Perimerter of rectangle with dimensions ${l}, ${w}: ${rectangle.perimeter()}`)
+            console.log(
+                `Area of rectangle with dimensions ${l}, ${w}: ${rectangle.area()}`
+            )
+            console.log(
+                `Perimerter of rectangle with dimensions ${l}, ${w}: ${rectangle.perimeter()}`
+            )
         }
     })
-    console.log('This statement is logged after the call to rect()');
+    console.log("This statement is logged after the call to rect()")
 }
 
 solveRect(2, 4)
